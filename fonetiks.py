@@ -20,9 +20,11 @@
 ᛋ - 's'
 ᛏ - 't'
 ᚢ - 'u'
+ᛒᛥ - 'v'
 ᚹ - 'w'
 ᛉ - 'x'
 ᚣ - 'y'
+ᛋᛥ - 'z'
 ᛇ - 'ai'
 ᚫ - 'ae'
 ᚦ - 'th'
@@ -42,6 +44,8 @@ nltk.download('cmudict', quiet=True)
 
 
 replacements = [
+    ('ᛒᛥ', 'v'),
+    ('ᛋᛥ', 'z'),
     ('ᚪ', 'a'),
     ('ᛒ', 'b'),
     ('ᚳ', 'ch'),
