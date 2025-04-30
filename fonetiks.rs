@@ -41,7 +41,7 @@ fn main() {
     let english = english.replace("sio","ʃo");
     let english = english.replace("sure","ʃur");
     let english = english.replace("ll","l");
-    // english = english.replace("le","el");
+    // let english = english.replace("le","el");
     let english = english.replace("co","ko");
     let english = english.replace("cu","ku");
     let english = english.replace("ca","ka");
