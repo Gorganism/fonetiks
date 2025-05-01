@@ -5,6 +5,8 @@ A project to try and make english more phonetic whilst keeping the pronounciatio
 | ------------- | ------------- |
 | MacOS | [Fonetiks Futhorc.keylayout](https://github.com/SalladShooter/fonetiks/blob/main/Fonetiks%20Futhorc.keylayout) |
 
+## Join The Discord!
+https://discord.gg/M3r6JTtm
 ## Website
 https://salladshooter.github.io/fonetiks-website/
 ## Website repo
