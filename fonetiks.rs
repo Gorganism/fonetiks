@@ -32,66 +32,71 @@ fn main() {
     } else {
         println!("Thornmode toggle could not be determined. The conversion will continue, but \"th\" substrings are not going to be affected.\n");
     }
-    let english = english.replace("thom","tom");
-    let english = english.replace("coope","cöpe");
-    let english = english.replace("co-op","cöp");
-    let english = english.replace("alk","ak");
-    let english = english.replace("sh","ʃ");
-    let english = english.replace("tio","ʃo");
-    let english = english.replace("sio","ʃo");
-    let english = english.replace("sure","ʃur");
-    let english = english.replace("ll","l");
-    // let english = english.replace("le","el");
-    let english = english.replace("co","ko");
-    let english = english.replace("cu","ku");
-    let english = english.replace("ca","ka");
-    let english = english.replace("ck","k");
-    let english = english.replace("ic","ik");
-    let english = english.replace("cr","kr");
-    let english = english.replace("ci","si");
-    let english = english.replace("ce","se");
-    let english = english.replace("cy","sy");
-    let english = english.replace("ch","c");
-    let english = english.replace("ikh","ic");
-    let english = english.replace("kn","gn");
-    let english = english.replace("ec","ek");
-    let english = english.replace("act","akt");
-    let english = english.replace("cem","kem");
-    let english = english.replace("whik","whic");
-    let english = english.replace("nge","nje");
-    let english = english.replace("ng","ŋ");
-    let english = english.replace("nk","ŋk");
-    let english = english.replace("ph","f");
-    let english = english.replace("ause","auz");
-    let english = english.replace("ause","auz");
-    let english = english.replace("ouse","aus");
-    let english = english.replace("cough","koff");
-    let english = english.replace("laugh","laff");
-    let english = english.replace("enough","enuf");
-    let english = english.replace("tough","tuff");
-    let english = english.replace("ough","o");
-    let english = english.replace("gh","");
-    let english = english.replace("exa","egza");
-    let english = english.replace("exi","egzi");
-    let english = english.replace("ax","aks");
-    let english = english.replace("ox","oks");
-    let english = english.replace("ux","uks");
-    let english = english.replace("ix","iks");
-    let english = english.replace("ex","eks");
-    let english = english.replace("x","z");
-    let english = english.replace("oo","u");
-    let english = english.replace("þro","þru");
-    let english = english.replace("þruw","þrow");
-    let english = english.replace("of","ov");
-    let english = english.replace("uld","ud");
-    let english = english.replace("kss","ks");
-    let english = english.replace("idk","idg");
-    let english = english.replace("ture","cur");
-    let english = english.replace("æcʃ","ækʃ");
-    let english = english.replace("wið","wiþ");
-    let english = english.replace("arsitekkur","arkitekcur");
-    let english = english.replace("geo","jeo");
-    let english = english.replace("rge","rje");
+    let replacements = vec![
+        ("thom","tom"),
+        ("coope","cöpe"),
+        ("co-op","cöp"),
+        ("alk","ak"),
+        ("sh","ʃ"),
+        ("tio","ʃo"),
+        ("sio","ʃo"),
+        ("sure","ʃur"),
+        ("ll","l"),
+        // ("le","el"),
+        ("co","ko"),
+        ("cu","ku"),
+        ("ca","ka"),
+        ("ck","k"),
+        ("ic","ik"),
+        ("cr","kr"),
+        ("ci","si"),
+        ("ce","se"),
+        ("cy","sy"),
+        ("ch","c"),
+        ("ikh","ic"),
+        ("kn","gn"),
+        ("ec","ek"),
+        ("act","akt"),
+        ("cem","kem"),
+        ("whik","whic"),
+        ("nge","nje"),
+        ("ng","ŋ"),
+        ("nk","ŋk"),
+        ("ph","f"),
+        ("ause","auz"),
+        ("ause","auz"),
+        ("ouse","aus"),
+        ("cough","koff"),
+        ("laugh","laff"),
+        ("enough","enuf"),
+        ("tough","tuff"),
+        ("ough","o"),
+        ("gh",""),
+        ("exa","egza"),
+        ("exi","egzi"),
+        ("ax","aks"),
+        ("ox","oks"),
+        ("ux","uks"),
+        ("ix","iks"),
+        ("ex","eks"),
+        ("x","z"),
+        ("oo","u"),
+        ("þro","þru"),
+        ("þruw","þrow"),
+        ("of","ov"),
+        ("uld","ud"),
+        ("kss","ks"),
+        ("idk","idg"),
+        ("ture","cur"),
+        ("æcʃ","ækʃ"),
+        ("wið","wiþ"),
+        ("arsitekkur","arkitekcur"),
+        ("geo","jeo"),
+        ("rge","rje"),
+    ];
+    for (a,b) in replacements {
+        english = english.replace(a,b);
+    }
     println!("This is not a perfect system, and manual adjustments may be needed.\n\nYour output is:");
     println!("{}",english);
 }
